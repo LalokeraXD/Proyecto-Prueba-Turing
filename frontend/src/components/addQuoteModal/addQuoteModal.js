@@ -70,7 +70,7 @@ const AddQuoteModal = ({ show, onClose }) => {
         <div className="modal_overlay" onClick={handleOverlayClick}>
             <div className="modal_container" ref={modalRef}>
                 <button className="modal_close-button" onClick={handleClose}><i className="fa-solid fa-xmark"></i></button>
-                <h2>Agregar Nuevo Artículo</h2>
+                <h2>Agregar Nueva Cita</h2>
                 <form className='modal_form' onSubmit={handleSubmit}>
                     <label htmlFor="img">URL de la Imagen:</label>
                     <input
