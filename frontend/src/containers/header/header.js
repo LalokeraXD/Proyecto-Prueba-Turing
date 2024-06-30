@@ -48,7 +48,7 @@ const Header = () => {
                         <a href='https://www.instagram.com/turing.ia_/'><i className="fa-brands fa-instagram"></i></a>
                     </div>
                     <nav className='header_nav-links'>
-                        <a href='http://localhost:3000/'>Inicio</a>
+                        <a href='https://proyecto-prueba-turing-frontend.vercel.app/'>Inicio</a>
                         <a href='#articles'>Artículos</a>
                         <a href='#tecnologies'>Tecnologías</a>
                         <a href='#quotes'>Citas</a>

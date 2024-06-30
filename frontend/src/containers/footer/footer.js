@@ -19,7 +19,7 @@ const Footer = () => {
                     <div>
                         <h2>Mapa del sitio</h2>
                         <ul className='footer_nav-links'>
-                            <li><a href='http://localhost:3000/'>Inicio</a></li>
+                            <li><a href='https://proyecto-prueba-turing-frontend.vercel.app/'>Inicio</a></li>
                             <li><a href='#articles'>Artículos</a></li>
                             <li><a href='#tecnologies'>Tecnologías</a></li>
                             <li><a href='#quotes'>Citas</a></li>
