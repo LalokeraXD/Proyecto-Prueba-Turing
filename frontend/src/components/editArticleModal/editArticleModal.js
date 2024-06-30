@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './editArticleModal.css';
+import apiUrl from '../../config/routeAPI';
 
 const EditArticleModal = ({ show, id, articleData, onClose }) => {
     const modalRef = useRef();
@@ -41,7 +42,7 @@ const EditArticleModal = ({ show, id, articleData, onClose }) => {
 
         try {
             const token = localStorage.getItem('token'); // Obtener el token JWT del localStorage
-            const response = await fetch(`http://localhost:3003/articles/${id}`, {
+            const response = await fetch(`${apiUrl}articles/${id}`, {
                 method: 'PUT', // Método PUT para actualizar el artículo
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,6 +1,7 @@
 // AddArticleModal.js
 import React, { useRef, useEffect, useState } from 'react';
 import './addArticleModal.css';
+import apiUrl from '../../config/routeAPI';
 
 const AddArticleModal = ({ show, onClose }) => {
     const modalRef = useRef();
@@ -33,7 +34,7 @@ const AddArticleModal = ({ show, onClose }) => {
 
         try {
             const token = localStorage.getItem('token'); // Obtener el token JWT del localStorage
-            const response = await fetch('http://localhost:3003/articles/add', {
+            const response = await fetch(`${apiUrl}articles/add`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

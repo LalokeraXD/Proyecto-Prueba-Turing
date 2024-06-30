@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './articles.css';
 import { Article, AddArticleModal, EditArticleModal } from '../../components';
+import apiUrl from '../../config/routeAPI';
 
 const Articles = () => {
     const [sortOrder, setSortOrder] = useState('desc');
@@ -28,7 +29,7 @@ const Articles = () => {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:3003/articles/')
+        fetch(`${apiUrl}articles/`)
             .then(response => response.json())
             .then(data => setArticles(data))
             .catch(error => console.error('Error fetching articles:', error));
@@ -63,7 +64,7 @@ const Articles = () => {
     };
 
     const updateArticles = async () => {
-        await fetch('http://localhost:3003/articles/')
+        await fetch(`${apiUrl}articles/`)
             .then(response => response.json())
             .then(data => setArticles(data))
             .catch(error => console.error('Error fetching articles:', error));
@@ -86,7 +87,7 @@ const Articles = () => {
     const handleDeleteArticle = async (id) => {
         try {
             const token = localStorage.getItem('token'); // Obtener el token JWT del localStorage
-            const response = await fetch(`http://localhost:3003/articles/${id}`, {
+            const response = await fetch(`${apiUrl}articles/${id}`, {
                 method: 'DELETE', // Método DELETE para eliminar el artículo
                 headers: {
                     Authorization: `Bearer ${token}`, // Enviar el token en las cabeceras

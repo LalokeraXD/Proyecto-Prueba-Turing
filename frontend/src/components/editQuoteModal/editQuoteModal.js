@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './editQuoteModal.css';
+import apiUrl from '../../config/routeAPI';
 
 const EditQuoteModal = ({ show, id, quoteData, onClose }) => {
     const modalRef = useRef();
@@ -41,7 +42,7 @@ const EditQuoteModal = ({ show, id, quoteData, onClose }) => {
 
         try {
             const token = localStorage.getItem('token'); // Obtener el token JWT del localStorage
-            const response = await fetch(`http://localhost:3003/quotes/${id}`, {
+            const response = await fetch(`${apiUrl}quotes/${id}`, {
                 method: 'PUT', // Método PUT para actualizar el artículo
                 headers: {
                     'Content-Type': 'application/json',

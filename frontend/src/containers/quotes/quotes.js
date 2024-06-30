@@ -4,6 +4,7 @@ import { Quote, AddQuoteModal, EditQuoteModal } from '../../components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import apiUrl from '../../config/routeAPI';
 
 const Quotes = () => {
     const [quotes, setQuotes] = useState([]);
@@ -15,7 +16,7 @@ const Quotes = () => {
     }, []);
 
     const updateQuotes = async () => {
-        await fetch('http://localhost:3003/quotes/')
+        await fetch(`${apiUrl}quotes/`)
             .then(response => response.json())
             .then(data => setQuotes(data))
             .catch(error => console.error('Error fetching quotes:', error));
@@ -42,7 +43,7 @@ const Quotes = () => {
     const handleDeleteQuote = async (id) => {
         try {
             const token = localStorage.getItem('token'); // Obtener el token JWT del localStorage
-            const response = await fetch(`http://localhost:3003/quotes/${id}`, {
+            const response = await fetch(`${apiUrl}quotes/${id}`, {
                 method: 'DELETE', // Método DELETE para eliminar la cita
                 headers: {
                     Authorization: `Bearer ${token}`, // Enviar el token en las cabeceras

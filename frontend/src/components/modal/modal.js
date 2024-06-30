@@ -1,6 +1,7 @@
 // modal.js
 import React, { useRef, useEffect, useState } from 'react';
 import './modal.css';
+import apiUrl from '../../config/routeAPI';
 
 const Modal = ({ show, onClose, isRegister, setIsRegister, onLoginSuccess }) => {
     const modalRef = useRef();
@@ -38,7 +39,7 @@ const Modal = ({ show, onClose, isRegister, setIsRegister, onLoginSuccess }) => 
             alert('Las contraseñas no coinciden.');
             return;
         }
-        const url = isRegister ? 'http://localhost:3003/users/register' : 'http://localhost:3003/users/login';
+        const url = isRegister ? `${apiUrl}users/register` : `${apiUrl}users/login`;
         const body = isRegister ? { username: userLogin, password: password, email: email } : { username: userLogin, password: password };
 
         try {
