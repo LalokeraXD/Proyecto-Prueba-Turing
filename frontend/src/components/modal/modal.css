@@ -1,0 +1,110 @@
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1000;
+}
+
+.modal_container {
+    background: var(--color-bg-black);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal_close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: color 0.3s;
+}
+
+.modal_close-button:hover {
+    color: var(--color-subtext);
+}
+
+.modal_container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.modal_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.modal_form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--color-bg-black);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal_form button[type="submit"], .modal_form button[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.modal_form button[type="submit"] {
+    background-color: var(--color-text);
+    color: white;
+    font-weight: 600;
+}
+
+.modal_form button[type="submit"]:hover {
+    background-color: var(--color-secondary);
+}
+
+.modal_form button[type="button"] {
+    background-color: transparent;
+    color: var(--color-text);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.modal_form button[type="button"]:hover {
+    color: var(--color-subtext);
+}

@@ -1,0 +1,107 @@
+
+.header_background {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: var(--color-bg-black); */
+    background: linear-gradient(45deg, #0f2d3c, #0b1c25);
+}
+
+.header_container {
+    width: 70rem;
+    display: flex;
+    padding: 0 30px;
+}
+
+.header_container img {
+    margin: auto 0;
+    height: 110px;
+    position: relative;
+    left: -20px;
+}
+
+.header_content {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.header_social-icons {
+    padding: 10px 0;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.header_social-icons i {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    color: var(--color-bg-black);
+    background-color: var(--color-text);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header_social-icons i:hover {
+    background-color: var(--color-subtext);
+}
+
+.header_nav-links {
+    min-height: 70px;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header_nav-links a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 20px;
+    place-content: center;
+    transition: color 0.3s;
+}
+
+.header_nav-links a:hover {
+    color: var(--color-subtext);
+}
+
+.header_login-button, .header_user-button, .header_logout-button {
+    background-color: transparent;
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 20px;
+    border: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header_login-button:hover, .header_user-button:hover, .header_logout-button:hover {
+    color: var(--color-subtext);
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+    .header_container img {
+        left: 0;
+    }
+    .header_container {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header_social-icons, .header_nav-links {
+        justify-content: center;
+    }
+
+
+}

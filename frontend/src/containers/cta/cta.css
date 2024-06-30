@@ -1,0 +1,102 @@
+
+.cta_background {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(15, 45, 60, 1) 50%, rgba(30, 190, 145, 1) 50%, rgba(30, 190, 145, 1) 100%);
+}
+
+.cta_container {
+    width: 70rem;
+    display: flex;
+    padding: 0 30px;
+}
+
+.cta_content-left {
+    width: 50%;
+    padding: 60px 25px 60px 0;
+}
+
+.cta_content-left h1 {
+    color: var(--color-text);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta_content-left p {
+    color: var(--color-bg-gray);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta_button {
+    background-color: var(--color-text);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta_button:hover {
+    background-color: var(--color-secondary);
+}
+
+.cta_content-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cta_content-right img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: none; */
+}
+
+@media screen and (max-width: 1024px) {
+    .cta_background {
+        background: linear-gradient(180deg, rgba(15, 45, 60, 1) 50%, rgba(30, 190, 145, 1) 50%, rgba(30, 190, 145, 1) 100%);
+    }
+
+    .cta_container {
+        flex-direction: column;
+    }
+
+    .cta_content-left {
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    
+    .cta_content-left, .cta_content-right {
+        width: 100%;
+        height: 500px;
+    }
+
+    .cta_content-right img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .cta_background {
+        background: linear-gradient(180deg, rgba(15, 45, 60, 1) 50%, rgba(30, 190, 145, 1) 50%, rgba(30, 190, 145, 1) 100%);
+    }
+
+    .cta_content-left {
+        box-sizing: content-box;
+        padding: 30px 0;
+    }
+
+}
