@@ -14,13 +14,13 @@ router.delete('/users/:username', authenticateAndAuthorize(['admin', 'user']), u
 
 // Article routers
 router.get('/articles', articleController.getAllArticles);
-router.post('/articles/add', authenticateAndAuthorize(['admin']), articleController.createArticle);
+router.post('/articles/add', authenticateAndAuthorize(['admin', 'user']), articleController.createArticle);
 router.put('/articles/:id', authenticateAndAuthorize(['admin']), articleController.updateArticleById);
 router.delete('/articles/:id', authenticateAndAuthorize(['admin']), articleController.deleteArticleById);
 
 // Quote routers
 router.get('/quotes', quoteController.getAllQuotes);
-router.post('/quotes/add', authenticateAndAuthorize(['admin']), quoteController.createQuote);
+router.post('/quotes/add', authenticateAndAuthorize(['admin', 'user']), quoteController.createQuote);
 router.put('/quotes/:id', authenticateAndAuthorize(['admin']), quoteController.updateQuoteById);
 router.delete('/quotes/:id', authenticateAndAuthorize(['admin']), quoteController.deleteQuoteById);
 
